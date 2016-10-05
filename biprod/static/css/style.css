@@ -1,0 +1,48 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+body {
+    background-color:silver;
+}
+
+header {
+    background-color:#669999;
+    height: 150px;
+}
+
+wrapper {
+    background-color:##6699CC;
+    float: overflow;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    border-radius: 10px;
+    background-color:#9999CC;
+    float: left;
+    width: 49%;
+}
+
+article {
+    border-radius: 10px;
+    background-color:#999999;
+    margin:10px;
+}
+
+aside {
+    border-radius: 10px;
+    background-color:#336666;
+    float: right;
+    width: 49%;
+}
+
+footer {
+    background-color:#CCFFFF;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    height: 150px;
+}
