@@ -1,80 +1,296 @@
-
-$primary-color: #0D4082;
-
-*{
-	padding:0;
-	margin:0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-
-
 body {
-    background-color:silver;
+
 }
 
 header {
-    background-color: $primary-color;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-}
-nav {
-  float: left; /* Desplazamos el nav hacia la izquierda */
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
 
-nav ul {
-  list-style: none;
-  overflow: hidden; /* Limpiamos errores de float */
-}
-
-nav ul li {
+#menu {
   float: left;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  margin: 10px;
+
+  button {
+    background-color: red;
+  }
 }
 
-nav ul li a {
-  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-  padding: 20px;
-  color: #fff;
-  text-decoration: none;
+#logo {
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: none;
 }
 
-nav ul li:hover {
-  background: #3ead47;
+#form {
+  background-color: blue;
+  float: right;
+  margin-top: 10px;
+  width: 85%;
+
+  input {
+    float: right;
+    margin: 10px;
+    width: 70%;
+  }
+
+  button {
+    width: 50px;
+    float: right;
+    margin: 10px;
+  }
 }
 
-wrapper {
-    background-color:#6599CC;
-    float: overflow;
-    width: 100%;
-    height: auto;
+#nav-icon {
+  float: right;
+
+  nav {
+     /* Desplazamos el nav hacia la izquierda */
+
+    ul {
+      list-style: none;
+      overflow: hidden; /* Limpiamos errores de float */
+
+      li {
+        float: left;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        display: none;
+
+        a {
+          display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+          padding: 20px;
+          color: #fff;
+          text-decoration: none;
+
+        }
+      }
+    }
+
+ }
+}
+
+
+#nav {
+  float: right;
+
+  nav {
+     /* Desplazamos el nav hacia la izquierda */
+
+    ul {
+      list-style: none;
+      overflow: hidden; /* Limpiamos errores de float */
+
+      li {
+        float: left;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        display: none;
+
+        a {
+          display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+          padding: 20px;
+          color: #fff;
+          text-decoration: none;
+
+        }
+      }
+    }
+  }
+
+  nav ul li:hover {
+    background: #3ead47;
+  }
+}
+
+
+
+#wrapper {
+  float: overflow;
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
 }
 
 section {
-    border-radius: 10px;
-    background-color:#9999CC;
-    float: left;
-    width: 49%;
+  background-color: #9999CC;
+  width: 100%;
+
 }
 
 article {
-    border-radius: 10px;
-    background-color:#999999;
-    margin:10px;
-}
-
-aside {
-    border-radius: 10px;
-    background-color:#336666;
-    float: right;
-    width: 49%;
+  display: inline-block;
+  background-color: silver;
+  width: 250px;
+  height: 270px;
+  margin: 10px;
 }
 
 footer {
-    background-color:#CCFFFF;
-    width: 100%;
-    bottom: 0;
-    position: fixed;
-    height: 150px;
+  background-color: #CCFFFF;
+  width: 100%;
+  height: 150px;
+}
+
+@media screen and (min-width: 481px) {
+
+  #form {
+      width: 85%;
+
+      input {
+        width: 70%;
+      }
+  }
+
+}
+
+@media screen and (min-width: 767px) {
+  #menu {
+    display: none;
+  }
+  #logo {
+    display: inline;
+  }
+
+  #nav-icon {
+    nav {
+      ul {
+        li{
+          display: inline;
+        }
+      }
+    }
+
+  }
+  #form {
+      width: 61%;
+
+      input {
+        width: 78%;
+      }
+ }
+}
+
+@media screen and (min-width: 950px) {
+  #menu {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #nav-icon {
+    nav {
+      ul {
+        li{
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  #nav {
+    nav {
+      ul {
+        li{
+          display: inline;
+        }
+      }
+    }
+
+  }
+
+  #form {
+      width: 50%;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+  #menu {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #nav-icon {
+    nav {
+      ul {
+        li{
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  #nav {
+    nav {
+      ul {
+        li{
+          display: inline;
+        }
+      }
+    }
+
+  }
+
+  #form {
+      width: 55%;
+
+      input {
+        width: 80%;
+      }
+ }
+}
+
+@media screen and (min-width: 1200px) {
+  #menu {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #nav-icon {
+    nav {
+      ul {
+        li{
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  #nav {
+    nav {
+      ul {
+        li{
+          display: inline;
+        }
+      }
+    }
+
+  }
+
+  #form {
+      width: 62%;
+
+      input {
+        width: 87%;
+      }
+ }
 }

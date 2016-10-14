@@ -3,35 +3,63 @@
   margin: 0;
 }
 
-body {
-  background-color: silver;
-}
-
 header {
-  background-color: #0D4082;
+  background: rgba(0, 0, 0, 0.9);
   width: 100%;
   position: fixed;
   z-index: 100;
 }
 
-nav {
+#menu {
   float: left;
-  /* Desplazamos el nav hacia la izquierda */
+  margin: 10px;
+}
+#menu button {
+  background-color: red;
 }
 
-nav ul {
+#logo {
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: none;
+}
+
+#form {
+  background-color: blue;
+  float: right;
+  margin-top: 10px;
+  width: 85%;
+}
+#form input {
+  float: right;
+  margin: 10px;
+  width: 70%;
+}
+#form button {
+  width: 50px;
+  float: right;
+  margin: 10px;
+}
+
+#nav-icon {
+  float: right;
+}
+#nav-icon nav {
+  /* Desplazamos el nav hacia la izquierda */
+}
+#nav-icon nav ul {
   list-style: none;
   overflow: hidden;
   /* Limpiamos errores de float */
 }
-
-nav ul li {
+#nav-icon nav ul li {
   float: left;
   font-family: Arial, sans-serif;
   font-size: 16px;
+  display: none;
 }
-
-nav ul li a {
+#nav-icon nav ul li a {
   display: block;
   /* Convertimos los elementos a en elementos bloque para manipular el padding */
   padding: 20px;
@@ -39,43 +67,156 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li:hover {
+#nav {
+  float: right;
+}
+#nav nav {
+  /* Desplazamos el nav hacia la izquierda */
+}
+#nav nav ul {
+  list-style: none;
+  overflow: hidden;
+  /* Limpiamos errores de float */
+}
+#nav nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  display: none;
+}
+#nav nav ul li a {
+  display: block;
+  /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+#nav nav ul li:hover {
   background: #3ead47;
 }
 
-wrapper {
-  background-color: #6599CC;
+#wrapper {
   float: overflow;
   width: 100%;
   height: auto;
+  padding-top: 60px;
 }
 
 section {
-  border-radius: 10px;
   background-color: #9999CC;
-  float: left;
-  width: 49%;
+  width: 100%;
 }
 
 article {
-  border-radius: 10px;
-  background-color: #999999;
+  display: inline-block;
+  background-color: silver;
+  width: 250px;
+  height: 270px;
   margin: 10px;
-}
-
-aside {
-  border-radius: 10px;
-  background-color: #336666;
-  float: right;
-  width: 49%;
 }
 
 footer {
   background-color: #CCFFFF;
   width: 100%;
-  bottom: 0;
-  position: fixed;
   height: 150px;
+}
+
+@media screen and (min-width: 481px) {
+  #form {
+    width: 85%;
+  }
+  #form input {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 767px) {
+  #menu {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #nav-icon nav ul li {
+    display: inline;
+  }
+
+  #form {
+    width: 61%;
+  }
+  #form input {
+    width: 78%;
+  }
+}
+@media screen and (min-width: 950px) {
+  #menu {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #nav-icon nav ul li {
+    display: none;
+  }
+
+  #nav nav ul li {
+    display: inline;
+  }
+
+  #form {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #menu {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #nav-icon nav ul li {
+    display: none;
+  }
+
+  #nav nav ul li {
+    display: inline;
+  }
+
+  #form {
+    width: 55%;
+  }
+  #form input {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #menu {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #nav-icon nav ul li {
+    display: none;
+  }
+
+  #nav nav ul li {
+    display: inline;
+  }
+
+  #form {
+    width: 62%;
+  }
+  #form input {
+    width: 87%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
