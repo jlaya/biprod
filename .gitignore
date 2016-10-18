@@ -1,3 +1,4 @@
 *.pyc
 *biproddb
 *.html~
+biprod/static .sass-cache/*
