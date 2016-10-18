@@ -34,7 +34,7 @@ header {
   background-color: blue;
   float: right;
   margin-top: 10px;
-  width: 85%;
+  width: 83%;
 
   input {
     float: right;
@@ -111,9 +111,8 @@ header {
   }
 }
 
-
-
 #wrapper {
+  display: inline-block;
   float: overflow;
   width: 100%;
   height: auto;
@@ -122,16 +121,54 @@ header {
 
 section {
   background-color: #9999CC;
+  float: right;
   width: 100%;
-
 }
 
-article {
-  display: inline-block;
-  background-color: silver;
-  width: 250px;
-  height: 270px;
-  margin: 10px;
+#products {
+  width: 90%;
+  background-color: green;
+  margin: 0 auto;
+
+  article {
+    display: inline-block;
+    background-color: silver;
+    width: 95%;
+    height: 350px;
+    margin: 10px;
+
+    img {
+      border: 3px solid black;
+      width: 98%;
+      height: 70%;
+    }
+
+  }
+}
+
+aside {
+
+    #sub-menu {
+      display: none;
+      border-radius: 10px;
+      float: left;
+      width:250px;
+      background-color: silver;
+      height: 500px;
+      margin:5px;
+
+      #category {
+        margin: 20px;
+
+        h3 {
+          margin-bottom: 10px;
+        }
+
+        ul {
+          list-style: none;
+        }
+      }
+    }
 }
 
 footer {
@@ -152,7 +189,20 @@ footer {
 
 }
 
+
 @media screen and (min-width: 767px) {
+
+  aside {
+
+      #sub-menu {
+        display: inline;
+        border-radius: 10px;
+        width:250px;
+        background-color: silver;
+        height: 500px;
+      }
+  }
+
   #menu {
     display: none;
   }
@@ -176,8 +226,21 @@ footer {
       input {
         width: 78%;
       }
- }
+   }
+   section {
+
+     width: 65%;
+   }
+
+   #products {
+
+     article {
+       width: 45%;
+
+     }
+   }
 }
+
 
 @media screen and (min-width: 950px) {
   #menu {
@@ -212,7 +275,17 @@ footer {
 
   #form {
       width: 50%;
- }
+  }
+  section {
+    width: 72%;
+  }
+  #products {
+
+    article {
+      width: 29%;
+
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -252,7 +325,10 @@ footer {
       input {
         width: 80%;
       }
- }
+   }
+   section {
+     width: 74%;
+   }
 }
 
 @media screen and (min-width: 1200px) {
@@ -287,10 +363,13 @@ footer {
   }
 
   #form {
-      width: 62%;
+      width: 60%;
 
       input {
-        width: 87%;
+        width: 85%;
       }
- }
+  }
+  section {
+    width: 78%;
+  }
 }
