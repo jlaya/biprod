@@ -1,17 +1,20 @@
+@import "_colors.scss";
+
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-
+  background-color: $secundary;
 }
 
 header {
-  background: rgba(0,0,0,0.9);
+  background-color: $primary;
   width: 100%;
   position: fixed;
   z-index: 100;
+  box-shadow: 0px 0px 3px grey;
 }
 
 #menu {
@@ -19,7 +22,7 @@ header {
   margin: 10px;
 
   button {
-    background-color: red;
+
   }
 }
 
@@ -31,21 +34,26 @@ header {
 }
 
 #form {
-  background-color: blue;
   float: right;
   margin-top: 10px;
-  width: 83%;
+  width: 81%;
 
   input {
     float: right;
     margin: 10px;
     width: 70%;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 2px solid white;
   }
 
   button {
     width: 50px;
     float: right;
     margin: 10px;
+    background: $primary;
+    border: none;
   }
 }
 
@@ -107,7 +115,7 @@ header {
   }
 
   nav ul li:hover {
-    background: #3ead47;
+    background: $complement;
   }
 }
 
@@ -120,27 +128,32 @@ header {
 }
 
 section {
-  background-color: #9999CC;
+
   float: right;
   width: 100%;
 }
 
 #products {
   width: 90%;
-  background-color: green;
   margin: 0 auto;
 
   article {
     display: inline-block;
-    background-color: silver;
     width: 95%;
     height: 350px;
     margin: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 3px grey;
 
     img {
-      border: 3px solid black;
+      box-shadow: 0px 0px 3px grey;
       width: 98%;
       height: 70%;
+      margin: 3px;
+    }
+
+    h4, h2 {
+      margin: 3px;
     }
 
   }
@@ -150,16 +163,15 @@ aside {
 
     #sub-menu {
       display: none;
-      border-radius: 10px;
       float: left;
       width:250px;
-      background-color: silver;
       height: 500px;
       margin:5px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 3px grey;
 
       #category {
         margin: 20px;
-
         h3 {
           margin-bottom: 10px;
         }
@@ -172,9 +184,52 @@ aside {
 }
 
 footer {
-  background-color: #CCFFFF;
-  width: 100%;
-  height: 150px;
+  background-color: $primary;
+  box-shadow: 0px 0px 3px grey;
+  display: inline-block;
+  float: overflow;
+  width: 98%;
+  height: 250px;
+  padding-left: 1%;
+  padding-right: 1%;
+  color: #ffffff;
+
+  h3 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  #copyright {
+    width: 97%;
+    height: 50px;
+    float: left;
+    background-color: $primary;
+  }
+
+  #hyper-logo {
+    width: 97%;
+    height: 200px;
+    background-color: $primary;
+    float: left;
+  }
+
+  #social-network {
+    width: 97%;
+    height: 200px;
+    background-color: $primary;
+    float: left;
+  }
+
+  #contacts {
+    width: 97%;
+    height: 200px;
+    background-color: $primary;
+    float: left;
+  }
 }
 
 @media screen and (min-width: 481px) {
@@ -198,7 +253,7 @@ footer {
         display: inline;
         border-radius: 10px;
         width:250px;
-        background-color: silver;
+        background-color: #ffffff;
         height: 500px;
       }
   }
@@ -237,6 +292,18 @@ footer {
      article {
        width: 45%;
 
+     }
+   }
+
+   footer {
+     #hyper-logo {
+       width: 32%;
+     }
+     #social-network {
+       width: 32%;
+     }
+     #contacts {
+       width: 32%;
      }
    }
 }
