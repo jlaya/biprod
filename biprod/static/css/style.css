@@ -5,6 +5,7 @@
 
 body {
   background-color: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -25,6 +26,7 @@ header {
   margin-left: 20px;
   margin-top: 10px;
   display: none;
+  color: white;
 }
 
 #form {
@@ -40,6 +42,7 @@ header {
   background: none;
   outline: none;
   border-bottom: 2px solid white;
+  color: white;
 }
 #form button {
   width: 50px;
@@ -51,9 +54,6 @@ header {
 
 #nav-icon {
   float: right;
-}
-#nav-icon nav {
-  /* Desplazamos el nav hacia la izquierda */
 }
 #nav-icon nav ul {
   list-style: none;
@@ -76,9 +76,6 @@ header {
 
 #nav {
   float: right;
-}
-#nav nav {
-  /* Desplazamos el nav hacia la izquierda */
 }
 #nav nav ul {
   list-style: none;
@@ -128,13 +125,19 @@ section {
   box-shadow: 0px 0px 3px grey;
 }
 #products article img {
-  box-shadow: 0px 0px 3px grey;
   width: 98%;
   height: 70%;
-  margin: 3px;
 }
-#products article h4, #products article h2 {
-  margin: 3px;
+#products article h4 {
+  margin: 10px;
+  color: gray;
+}
+#products article h2 {
+  margin: 10px;
+  color: #038b47;
+}
+#products article:hover {
+  box-shadow: 0px 0px 20px grey;
 }
 
 aside #sub-menu {
@@ -142,22 +145,30 @@ aside #sub-menu {
   float: left;
   width: 250px;
   height: 500px;
-  margin: 5px;
+  margin: 10px;
   background-color: #ffffff;
   box-shadow: 0px 0px 3px grey;
 }
-aside #sub-menu #category {
-  margin: 20px;
-}
 aside #sub-menu #category h3 {
-  margin-bottom: 10px;
+  color: grey;
 }
 aside #sub-menu #category ul {
   list-style: none;
 }
+aside #sub-menu #category li {
+  padding: 15px;
+  width: 88%;
+}
+aside #sub-menu #category li a {
+  text-decoration: none;
+  color: grey;
+}
+aside #sub-menu #category li:hover {
+  background-color: #f2f2f2;
+}
 
 footer {
-  background-color: #0650a0;
+  background-color: white;
   box-shadow: 0px 0px 3px grey;
   display: inline-block;
   float: overflow;
@@ -165,7 +176,7 @@ footer {
   height: 250px;
   padding-left: 1%;
   padding-right: 1%;
-  color: #ffffff;
+  color: grey;
 }
 footer h3 {
   margin-bottom: 10px;
@@ -178,25 +189,39 @@ footer #copyright {
   width: 97%;
   height: 50px;
   float: left;
-  background-color: #0650a0;
+  background-color: white;
 }
 footer #hyper-logo {
   width: 97%;
   height: 200px;
-  background-color: #0650a0;
+  background-color: white;
   float: left;
 }
 footer #social-network {
   width: 97%;
   height: 200px;
-  background-color: #0650a0;
+  background-color: white;
   float: left;
+}
+footer #social-network li {
+  padding: 10px;
+}
+footer #social-network li a {
+  text-decoration: none;
+  color: grey;
 }
 footer #contacts {
   width: 97%;
   height: 200px;
-  background-color: #0650a0;
+  background-color: white;
   float: left;
+}
+footer #contacts li {
+  padding: 10px;
+}
+footer #contacts li a {
+  text-decoration: none;
+  color: grey;
 }
 
 @media screen and (min-width: 481px) {
@@ -210,7 +235,6 @@ footer #contacts {
 @media screen and (min-width: 767px) {
   aside #sub-menu {
     display: inline;
-    border-radius: 10px;
     width: 250px;
     background-color: #ffffff;
     height: 500px;
@@ -236,11 +260,11 @@ footer #contacts {
   }
 
   section {
-    width: 65%;
+    width: 64%;
   }
 
   #products article {
-    width: 45%;
+    width: 44%;
   }
 
   footer #hyper-logo {
@@ -275,7 +299,7 @@ footer #contacts {
   }
 
   section {
-    width: 72%;
+    width: 71%;
   }
 
   #products article {
@@ -307,7 +331,7 @@ footer #contacts {
   }
 
   section {
-    width: 74%;
+    width: 73%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -335,7 +359,7 @@ footer #contacts {
   }
 
   section {
-    width: 78%;
+    width: 77%;
   }
 }
 

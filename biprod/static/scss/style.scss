@@ -7,6 +7,7 @@
 
 body {
   background-color: $secundary;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -20,10 +21,6 @@ header {
 #menu {
   float: left;
   margin: 10px;
-
-  button {
-
-  }
 }
 
 #logo {
@@ -31,13 +28,13 @@ header {
   margin-left: 20px;
   margin-top: 10px;
   display: none;
+  color: white;
 }
 
 #form {
   float: right;
   margin-top: 10px;
   width: 81%;
-
   input {
     float: right;
     margin: 10px;
@@ -46,6 +43,7 @@ header {
     background: none;
     outline: none;
     border-bottom: 2px solid white;
+    color: white;
   }
 
   button {
@@ -59,63 +57,48 @@ header {
 
 #nav-icon {
   float: right;
-
   nav {
-     /* Desplazamos el nav hacia la izquierda */
-
     ul {
       list-style: none;
       overflow: hidden; /* Limpiamos errores de float */
-
       li {
         float: left;
         font-family: Arial, sans-serif;
         font-size: 16px;
         display: none;
-
         a {
           display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
           padding: 20px;
           color: #fff;
           text-decoration: none;
-
-        }
-      }
-    }
-
- }
-}
-
-
-#nav {
-  float: right;
-
-  nav {
-     /* Desplazamos el nav hacia la izquierda */
-
-    ul {
-      list-style: none;
-      overflow: hidden; /* Limpiamos errores de float */
-
-      li {
-        float: left;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        display: none;
-
-        a {
-          display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-          padding: 20px;
-          color: #fff;
-          text-decoration: none;
-
         }
       }
     }
   }
+}
 
-  nav ul li:hover {
-    background: $complement;
+#nav {
+  float: right;
+  nav {
+    ul {
+      list-style: none;
+      overflow: hidden; /* Limpiamos errores de float */
+      li {
+        float: left;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        display: none;
+        a {
+          display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+          padding: 20px;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      li:hover {
+        background: $complement;
+      }
+    }
   }
 }
 
@@ -128,7 +111,6 @@ header {
 }
 
 section {
-
   float: right;
   width: 100%;
 }
@@ -136,7 +118,6 @@ section {
 #products {
   width: 90%;
   margin: 0 auto;
-
   article {
     display: inline-block;
     width: 95%;
@@ -144,47 +125,58 @@ section {
     margin: 10px;
     background-color: #ffffff;
     box-shadow: 0px 0px 3px grey;
-
     img {
-      box-shadow: 0px 0px 3px grey;
       width: 98%;
       height: 70%;
-      margin: 3px;
     }
-
-    h4, h2 {
-      margin: 3px;
+    h4 {
+      margin: 10px;
+      color: gray;
     }
+    h2 {
+      margin: 10px;
+      color: $complement;
+    }
+  }
 
+  article:hover {
+    box-shadow: 0px 0px 20px grey;
   }
 }
 
 aside {
-
     #sub-menu {
       display: none;
       float: left;
       width:250px;
       height: 500px;
-      margin:5px;
+      margin:10px;
       background-color: #ffffff;
       box-shadow: 0px 0px 3px grey;
-
       #category {
-        margin: 20px;
         h3 {
-          margin-bottom: 10px;
+          color: grey;
         }
-
         ul {
           list-style: none;
         }
+          li {
+            padding: 15px;
+            width: 88%;
+            a {
+              text-decoration: none;
+              color: grey;
+            }
+          }
+          li:hover {
+            background-color: $secundary;
+          }
       }
     }
 }
 
 footer {
-  background-color: $primary;
+  background-color: white;
   box-shadow: 0px 0px 3px grey;
   display: inline-block;
   float: overflow;
@@ -192,13 +184,11 @@ footer {
   height: 250px;
   padding-left: 1%;
   padding-right: 1%;
-  color: #ffffff;
-
+  color: grey;
   h3 {
     margin-bottom: 10px;
     margin-top: 10px;
   }
-
   ul {
     list-style: none;
   }
@@ -207,28 +197,44 @@ footer {
     width: 97%;
     height: 50px;
     float: left;
-    background-color: $primary;
+    background-color: white;
   }
 
   #hyper-logo {
     width: 97%;
     height: 200px;
-    background-color: $primary;
+    background-color: white;
     float: left;
+    img {
+    }
   }
 
   #social-network {
     width: 97%;
     height: 200px;
-    background-color: $primary;
+    background-color: white;
     float: left;
-  }
+    li {
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: grey;
+      }
+    }
+}
 
   #contacts {
     width: 97%;
     height: 200px;
-    background-color: $primary;
+    background-color: white;
     float: left;
+    li {
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: grey;
+      }
+    }
   }
 }
 
@@ -236,22 +242,18 @@ footer {
 
   #form {
       width: 85%;
-
       input {
         width: 70%;
       }
   }
-
 }
 
 
 @media screen and (min-width: 767px) {
 
   aside {
-
       #sub-menu {
         display: inline;
-        border-radius: 10px;
         width:250px;
         background-color: #ffffff;
         height: 500px;
@@ -273,7 +275,6 @@ footer {
         }
       }
     }
-
   }
   #form {
       width: 61%;
@@ -283,15 +284,12 @@ footer {
       }
    }
    section {
-
-     width: 65%;
+     width: 64%;
    }
 
    #products {
-
      article {
-       width: 45%;
-
+       width: 44%;
      }
    }
 
@@ -307,7 +305,6 @@ footer {
      }
    }
 }
-
 
 @media screen and (min-width: 950px) {
   #menu {
@@ -326,7 +323,6 @@ footer {
         }
       }
     }
-
   }
 
   #nav {
@@ -337,20 +333,17 @@ footer {
         }
       }
     }
-
   }
 
   #form {
       width: 50%;
   }
   section {
-    width: 72%;
+    width: 71%;
   }
   #products {
-
     article {
       width: 29%;
-
     }
   }
 }
@@ -359,11 +352,9 @@ footer {
   #menu {
     display: none;
   }
-
   #logo {
     display: inline;
   }
-
   #nav-icon {
     nav {
       ul {
@@ -372,9 +363,7 @@ footer {
         }
       }
     }
-
   }
-
   #nav {
     nav {
       ul {
@@ -383,9 +372,7 @@ footer {
         }
       }
     }
-
   }
-
   #form {
       width: 55%;
 
@@ -394,7 +381,7 @@ footer {
       }
    }
    section {
-     width: 74%;
+     width: 73%;
    }
 }
 
@@ -402,11 +389,9 @@ footer {
   #menu {
     display: none;
   }
-
   #logo {
     display: inline;
   }
-
   #nav-icon {
     nav {
       ul {
@@ -415,7 +400,6 @@ footer {
         }
       }
     }
-
   }
 
   #nav {
@@ -426,7 +410,6 @@ footer {
         }
       }
     }
-
   }
 
   #form {
@@ -437,6 +420,6 @@ footer {
       }
   }
   section {
-    width: 78%;
+    width: 77%;
   }
 }
