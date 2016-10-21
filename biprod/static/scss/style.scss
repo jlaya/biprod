@@ -85,21 +85,53 @@ header {
       overflow: hidden; /* Limpiamos errores de float */
       li {
         float: left;
-        font-family: Arial, sans-serif;
         font-size: 16px;
         display: none;
         a {
           display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-          padding: 20px;
-          color: #fff;
           text-decoration: none;
+
+          button {
+            background-color: $primary;
+            border:none;
+            color: #fff;
+            padding: 20px;
+            outline: none;
+          }
+
         }
-      }
-      li:hover {
-        background: $complement;
       }
     }
   }
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    background: rgba(255,255,255,0.3);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    padding-top: 240%;
+    padding-left: 240%;
+    margin-top: -120%;
+    margin-left: -120%;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  &:active:after {
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
 }
 
 #wrapper {
@@ -241,9 +273,9 @@ footer {
 @media screen and (min-width: 481px) {
 
   #form {
-      width: 85%;
+      width: 89%;
       input {
-        width: 70%;
+        width: 74%;
       }
   }
 }
@@ -260,24 +292,24 @@ footer {
       }
   }
 
-  #menu {
-    display: none;
-  }
+  // #menu {
+  //   display: none;
+  // }
   #logo {
     display: inline;
   }
 
-  #nav-icon {
-    nav {
-      ul {
-        li{
-          display: inline;
-        }
-      }
-    }
-  }
+  // #nav-icon {
+  //   nav {
+  //     ul {
+  //       li{
+  //         display: inline;
+  //       }
+  //     }
+  //   }
+  // }
   #form {
-      width: 61%;
+      width: 71%;
 
       input {
         width: 78%;
