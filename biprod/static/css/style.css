@@ -12,7 +12,7 @@ header {
   background-color: #0650a0;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   box-shadow: 0px 0px 3px grey;
 }
 
@@ -50,6 +50,7 @@ header {
   margin: 10px;
   background: #0650a0;
   border: none;
+  outline: none;
 }
 
 #nav-icon {
@@ -72,6 +73,59 @@ header {
   padding: 20px;
   color: #fff;
   text-decoration: none;
+}
+
+#menu-side {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: white;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  z-index: 3;
+}
+
+#menu-side ul {
+  list-style: none;
+}
+#menu-side li {
+  padding: 15px;
+  width: 105%;
+  margin-top: 10px;
+}
+#menu-side li a {
+  text-decoration: none;
+  color: grey;
+}
+#menu-side li:hover {
+  background-color: #f2f2f2;
+}
+
+#menu-icon {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 4;
+  display: none;
+}
+
+.fadebox {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+  -moz-opacity: 0.8;
+  opacity: .500;
+  filter: alpha(opacity=80);
 }
 
 #nav {

@@ -19,14 +19,6 @@
         </ul>
       </nav>
     </div>
-    <!-- <div id="nav-icon">
-      <nav>
-        <ul>
-          <li><a href="#"><img src="d" ></a></li>
-          <li><a href="#"><img src="d" ></a></li>
-        </ul>
-      </nav>
-    </div> -->
     <div id="form">
       <form>
         <button type="submit"><img src="{% static "img/icons/search1x.png" %}" ></button>
@@ -35,14 +27,22 @@
       </form>
     </div>
     <div id="menu">
-      <img src="{% static "img/icons/menu.png" %}" >
+      <a href="javascript:showLightbox();"><img src="{% static "img/icons/menu.png" %}" ></a>
     </div>
     <div id="logo">
-      <!-- <img src="" width="150" height="40"> -->
       <h2>HyperJumbo</h2>
     </div>
-
   </header>
+  <nav>
+      <ul id="menu-icon">
+        <a href="javascript:hideLightbox();"><img src="{% static "img/icons/menu_black1x.png" %}" ></a>
+      </ul>
+      <ul id="menu-side">
+        <li><a href="#">Iniciar Sessión</a></li>
+        <li><a href="#">Registrarse</a></li>
+        <li><a href="#">Salir</a></li>
+      </ul>
+  </nav>
   <div id="wrapper">
     {% block content %}
     {% endblock %}
@@ -77,5 +77,18 @@
     <center><p>Copyright © 2016 Hyper Jumbo Mall</p></center>
   </div>
 </footer>
+<a href="javascript:hideLightbox();"><div id="fade" class="fadebox">&nbsp;</div></a>
+<script>
+function showLightbox() {
+    document.getElementById('menu-side').style.transform='translate(0%, 0)';
+    document.getElementById('fade').style.display='block';
+    document.getElementById('menu-icon').style.display='block';
+}
+function hideLightbox() {
+    document.getElementById('menu-side').style.transform='translate(-100%, 0)';
+    document.getElementById('fade').style.display='none';
+    document.getElementById('menu-icon').style.display='none';
+}
+</script>
 </body>
 </html>
