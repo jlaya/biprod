@@ -94,13 +94,23 @@ header {
   list-style: none;
 }
 #menu-side li {
-  padding: 15px;
-  width: 105%;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 #menu-side li a {
   text-decoration: none;
   color: grey;
+}
+#menu-side li a button {
+  background-color: white;
+  border: none;
+  color: grey;
+  outline: none;
+  width: 116%;
+  text-align: left;
+  padding: 15px;
+}
+#menu-side li a button:hover {
+  background-color: #f2f2f2;
 }
 #menu-side li:hover {
   background-color: #f2f2f2;
@@ -236,15 +246,20 @@ aside #sub-menu #category h3 {
 aside #sub-menu #category ul {
   list-style: none;
 }
-aside #sub-menu #category li {
-  padding: 15px;
-  width: 88%;
-}
 aside #sub-menu #category li a {
   text-decoration: none;
+}
+aside #sub-menu #category li a button {
+  background-color: white;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  outline: none;
+  text-align: left;
+  width: 100%;
   color: grey;
 }
-aside #sub-menu #category li:hover {
+aside #sub-menu #category li a button:hover {
   background-color: #f2f2f2;
 }
 

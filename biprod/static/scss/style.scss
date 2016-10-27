@@ -98,12 +98,22 @@ header {
     list-style: none;
   }
     li {
-      padding: 15px;
-      width: 105%;
-      margin-top: 10px;
+      margin-top: 15px;
       a {
         text-decoration: none;
         color: grey;
+        button {
+          background-color: white;
+          border:none;
+          color: grey;
+          outline: none;
+          width: 116%;
+          text-align: left;
+          padding: 15px;
+        }
+        button:hover {
+          background-color: $secundary;
+        }
       }
     }
     li:hover {
@@ -249,15 +259,22 @@ aside {
           list-style: none;
         }
           li {
-            padding: 15px;
-            width: 88%;
             a {
               text-decoration: none;
-              color: grey;
+              button {
+                background-color: white;
+                border:none;
+                color: #fff;
+                padding: 20px;
+                outline: none;
+                text-align: left;
+                width: 100%;
+                color: grey;
+              }
+              button:hover {
+                background-color: $secundary;
+              }
             }
-          }
-          li:hover {
-            background-color: $secundary;
           }
       }
     }
