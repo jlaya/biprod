@@ -1,146 +1,18 @@
-@import "_colors.scss";
-
-* {
-  padding: 0;
-  margin: 0;
-}
+@import "colors";
+@import "class";
+* {padding: 0; margin: 0;}
 
 body {
-  background-color: $secundary;
+  background-color: $grey2;
   font-family: 'Roboto', sans-serif;
 }
 
 header {
-  background-color: $primary;
+  background-color: $blue;
   width: 100%;
   position: fixed;
   z-index: 1;
-  box-shadow: 0px 0px 3px grey;
-}
-
-#menu {
-  float: left;
-  margin: 10px;
-}
-
-#logo {
-  float: left;
-  margin-left: 20px;
-  margin-top: 10px;
-  display: none;
-  color: white;
-}
-
-#form {
-  float: right;
-  margin-top: 10px;
-  width: 77%;
-  input {
-    float: right;
-    margin: 10px;
-    width: 59%;
-    border: none;
-    background: none;
-    outline: none;
-    border-bottom: 2px solid white;
-    color: white;
-  }
-
-  button {
-    width: 50px;
-    float: right;
-    margin: 10px;
-    background: $primary;
-    border: none;
-    outline: none;
-  }
-}
-
-#nav-icon {
-  float: right;
-  nav {
-    ul {
-      list-style: none;
-      overflow: hidden; /* Limpiamos errores de float */
-      li {
-        float: left;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        display: none;
-        a {
-          display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-          padding: 20px;
-          color: #fff;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
-
-#menu-side {
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: white;
-  list-style-type: none;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  z-index: 3;
-}
-
-#menu-side {
-  ul {
-    list-style: none;
-  }
-    li {
-      margin-top: 15px;
-      a {
-        text-decoration: none;
-        color: grey;
-        button {
-          background-color: white;
-          border:none;
-          color: grey;
-          outline: none;
-          width: 116%;
-          text-align: left;
-          padding: 15px;
-        }
-        button:hover {
-          background-color: $secundary;
-        }
-      }
-    }
-    li:hover {
-      background-color: $secundary;
-    }
-}
-
-#menu-icon {
-  position: fixed;
-  top:10px;
-  left: 10px;
-  z-index: 4;
-  display: none;
-}
-
-.fadebox {
-  display: none;
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index:2;
-  -moz-opacity: 0.8;
-  opacity:.500;
-  filter: alpha(opacity=80);
+  box-shadow: 0px 0px 3px $grey;
 }
 
 #nav {
@@ -156,48 +28,106 @@ header {
         a {
           display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
           text-decoration: none;
-
           button {
-            background-color: $primary;
+            background-color: $blue;
             border:none;
             color: #fff;
             padding: 20px;
             outline: none;
           }
-
         }
       }
     }
   }
 }
 
-.ripple {
-  position: relative;
-  overflow: hidden;
-
-  &:after {
-    content: "";
-    background: rgba(255,255,255,0.3);
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    padding-top: 240%;
-    padding-left: 240%;
-    margin-top: -120%;
-    margin-left: -120%;
-    opacity: 0;
-    transition: all 1s;
+#form {
+  float: right;
+  margin-top: 10px;
+  width: 77%;
+  input {
+    float: right;
+    margin: 10px;
+    width: 59%;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 2px solid $white;
+    color: $white;
   }
 
-  &:active:after {
-    padding-top: 0;
-    padding-left: 0;
-    margin-top: 0;
-    margin-left: 0;
-    opacity: 1;
-    transition: 0s;
+  button {
+    width: 50px;
+    float: right;
+    margin: 10px;
+    background: $blue;
+    border: none;
+    outline: none;
   }
+}
 
+#menu-icon {
+  float: left;
+  margin: 10px;
+}
+
+#logo {
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: none;
+  color: $white;
+}
+
+#menu-side {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: $white;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  z-index: 3;
+}
+
+#menu-side {
+  ul {
+    list-style: none;
+  }
+    li {
+      margin-top: 15px;
+      a {
+        text-decoration: none;
+        color: $grey;
+        button {
+          background-color: $white;
+          border:none;
+          color: $grey;
+          outline: none;
+          width: 116%;
+          text-align: left;
+          padding: 15px;
+        }
+        button:hover {
+          background-color: $grey2;
+        }
+      }
+    }
+    li:hover {
+      background-color: $grey2;
+    }
+}
+
+#menu-icon-clear {
+  position: fixed;
+  top:10px;
+  left: 10px;
+  z-index: 4;
+  display: none;
 }
 
 #wrapper {
@@ -221,8 +151,8 @@ section {
     width: 95%;
     height: 350px;
     margin: 10px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 3px grey;
+    background-color: $white;
+    box-shadow: 0px 0px 3px $grey;
     img {
       width: 98%;
       height: 70%;
@@ -233,12 +163,12 @@ section {
     }
     h2 {
       margin: 10px;
-      color: $complement;
+      color: $green;
     }
   }
 
   article:hover {
-    box-shadow: 0px 0px 20px grey;
+    box-shadow: 0px 0px 20px $grey;
   }
 }
 
@@ -249,11 +179,11 @@ aside {
       width:250px;
       height: 500px;
       margin:10px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 3px grey;
+      background-color: $white;
+      box-shadow: 0px 0px 3px $grey;
       #category {
         h3 {
-          color: grey;
+          color: $grey;
         }
         ul {
           list-style: none;
@@ -262,17 +192,17 @@ aside {
             a {
               text-decoration: none;
               button {
-                background-color: white;
+                background-color: $white;
                 border:none;
                 color: #fff;
                 padding: 20px;
                 outline: none;
                 text-align: left;
                 width: 100%;
-                color: grey;
+                color: $grey;
               }
               button:hover {
-                background-color: $secundary;
+                background-color: $grey2;
               }
             }
           }
@@ -281,15 +211,15 @@ aside {
 }
 
 footer {
-  background-color: white;
-  box-shadow: 0px 0px 3px grey;
+  background-color: $white;
+  box-shadow: 0px 0px 3px $grey;
   display: inline-block;
   float: overflow;
   width: 98%;
   height: 250px;
   padding-left: 1%;
   padding-right: 1%;
-  color: grey;
+  color: $grey;
   h3 {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -302,13 +232,13 @@ footer {
     width: 97%;
     height: 50px;
     float: left;
-    background-color: white;
+    background-color: $white;
   }
 
   #hyper-logo {
     width: 97%;
     height: 200px;
-    background-color: white;
+    background-color: $white;
     float: left;
     img {
     }
@@ -317,13 +247,13 @@ footer {
   #social-network {
     width: 97%;
     height: 200px;
-    background-color: white;
+    background-color: $white;
     float: left;
     li {
       padding: 10px;
       a {
         text-decoration: none;
-        color: grey;
+        color: $grey;
       }
     }
 }
@@ -331,200 +261,16 @@ footer {
   #contacts {
     width: 97%;
     height: 200px;
-    background-color: white;
+    background-color: $white;
     float: left;
     li {
       padding: 10px;
       a {
         text-decoration: none;
-        color: grey;
+        color: $grey;
       }
     }
   }
 }
 
-@media screen and (min-width: 481px) {
-
-  #form {
-      width: 89%;
-      input {
-        width: 74%;
-      }
-  }
-}
-
-
-@media screen and (min-width: 767px) {
-
-  aside {
-      #sub-menu {
-        display: inline;
-        width:250px;
-        background-color: #ffffff;
-        height: 500px;
-      }
-  }
-
-  // #menu {
-  //   display: none;
-  // }
-  #logo {
-    display: inline;
-  }
-
-  // #nav-icon {
-  //   nav {
-  //     ul {
-  //       li{
-  //         display: inline;
-  //       }
-  //     }
-  //   }
-  // }
-  #form {
-      width: 71%;
-
-      input {
-        width: 78%;
-      }
-   }
-   section {
-     width: 64%;
-   }
-
-   #products {
-     article {
-       width: 44%;
-     }
-   }
-
-   footer {
-     #hyper-logo {
-       width: 32%;
-     }
-     #social-network {
-       width: 32%;
-     }
-     #contacts {
-       width: 32%;
-     }
-   }
-}
-
-@media screen and (min-width: 950px) {
-  #menu {
-    display: none;
-  }
-
-  #logo {
-    display: inline;
-  }
-
-  #nav-icon {
-    nav {
-      ul {
-        li{
-          display: none;
-        }
-      }
-    }
-  }
-
-  #nav {
-    nav {
-      ul {
-        li{
-          display: inline;
-        }
-      }
-    }
-  }
-
-  #form {
-      width: 50%;
-  }
-  section {
-    width: 71%;
-  }
-  #products {
-    article {
-      width: 29%;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #menu {
-    display: none;
-  }
-  #logo {
-    display: inline;
-  }
-  #nav-icon {
-    nav {
-      ul {
-        li{
-          display: none;
-        }
-      }
-    }
-  }
-  #nav {
-    nav {
-      ul {
-        li{
-          display: inline;
-        }
-      }
-    }
-  }
-  #form {
-      width: 55%;
-
-      input {
-        width: 80%;
-      }
-   }
-   section {
-     width: 73%;
-   }
-}
-
-@media screen and (min-width: 1200px) {
-  #menu {
-    display: none;
-  }
-  #logo {
-    display: inline;
-  }
-  #nav-icon {
-    nav {
-      ul {
-        li{
-          display: none;
-        }
-      }
-    }
-  }
-
-  #nav {
-    nav {
-      ul {
-        li{
-          display: inline;
-        }
-      }
-    }
-  }
-
-  #form {
-      width: 60%;
-
-      input {
-        width: 85%;
-      }
-  }
-  section {
-    width: 77%;
-  }
-}
+@import "media";

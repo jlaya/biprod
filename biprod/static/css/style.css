@@ -1,129 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: #f2f2f2;
-  font-family: 'Roboto', sans-serif;
-}
-
-header {
-  background-color: #0650a0;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  box-shadow: 0px 0px 3px grey;
-}
-
-#menu {
-  float: left;
-  margin: 10px;
-}
-
-#logo {
-  float: left;
-  margin-left: 20px;
-  margin-top: 10px;
-  display: none;
-  color: white;
-}
-
-#form {
-  float: right;
-  margin-top: 10px;
-  width: 77%;
-}
-#form input {
-  float: right;
-  margin: 10px;
-  width: 59%;
-  border: none;
-  background: none;
-  outline: none;
-  border-bottom: 2px solid white;
-  color: white;
-}
-#form button {
-  width: 50px;
-  float: right;
-  margin: 10px;
-  background: #0650a0;
-  border: none;
-  outline: none;
-}
-
-#nav-icon {
-  float: right;
-}
-#nav-icon nav ul {
-  list-style: none;
-  overflow: hidden;
-  /* Limpiamos errores de float */
-}
-#nav-icon nav ul li {
-  float: left;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  display: none;
-}
-#nav-icon nav ul li a {
-  display: block;
-  /* Convertimos los elementos a en elementos bloque para manipular el padding */
-  padding: 20px;
-  color: #fff;
-  text-decoration: none;
-}
-
-#menu-side {
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: white;
-  list-style-type: none;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  z-index: 3;
-}
-
-#menu-side ul {
-  list-style: none;
-}
-#menu-side li {
-  margin-top: 15px;
-}
-#menu-side li a {
-  text-decoration: none;
-  color: grey;
-}
-#menu-side li a button {
-  background-color: white;
-  border: none;
-  color: grey;
-  outline: none;
-  width: 116%;
-  text-align: left;
-  padding: 15px;
-}
-#menu-side li a button:hover {
-  background-color: #f2f2f2;
-}
-#menu-side li:hover {
-  background-color: #f2f2f2;
-}
-
-#menu-icon {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 4;
-  display: none;
-}
-
 .fadebox {
   display: none;
   position: fixed;
@@ -136,32 +10,6 @@ header {
   -moz-opacity: 0.8;
   opacity: .500;
   filter: alpha(opacity=80);
-}
-
-#nav {
-  float: right;
-}
-#nav nav ul {
-  list-style: none;
-  overflow: hidden;
-  /* Limpiamos errores de float */
-}
-#nav nav ul li {
-  float: left;
-  font-size: 16px;
-  display: none;
-}
-#nav nav ul li a {
-  display: block;
-  /* Convertimos los elementos a en elementos bloque para manipular el padding */
-  text-decoration: none;
-}
-#nav nav ul li a button {
-  background-color: #0650a0;
-  border: none;
-  color: #fff;
-  padding: 20px;
-  outline: none;
 }
 
 .ripple {
@@ -190,6 +38,136 @@ header {
   transition: 0s;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #efefef;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #0650a0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0px 0px 3px #808080;
+}
+
+#nav {
+  float: right;
+}
+#nav nav ul {
+  list-style: none;
+  overflow: hidden;
+  /* Limpiamos errores de float */
+}
+#nav nav ul li {
+  float: left;
+  font-size: 16px;
+  display: none;
+}
+#nav nav ul li a {
+  display: block;
+  /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  text-decoration: none;
+}
+#nav nav ul li a button {
+  background-color: #0650a0;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  outline: none;
+}
+
+#form {
+  float: right;
+  margin-top: 10px;
+  width: 77%;
+}
+#form input {
+  float: right;
+  margin: 10px;
+  width: 59%;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+}
+#form button {
+  width: 50px;
+  float: right;
+  margin: 10px;
+  background: #0650a0;
+  border: none;
+  outline: none;
+}
+
+#menu-icon {
+  float: left;
+  margin: 10px;
+}
+
+#logo {
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: none;
+  color: #ffffff;
+}
+
+#menu-side {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ffffff;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  z-index: 3;
+}
+
+#menu-side ul {
+  list-style: none;
+}
+#menu-side li {
+  margin-top: 15px;
+}
+#menu-side li a {
+  text-decoration: none;
+  color: #808080;
+}
+#menu-side li a button {
+  background-color: #ffffff;
+  border: none;
+  color: #808080;
+  outline: none;
+  width: 116%;
+  text-align: left;
+  padding: 15px;
+}
+#menu-side li a button:hover {
+  background-color: #efefef;
+}
+#menu-side li:hover {
+  background-color: #efefef;
+}
+
+#menu-icon-clear {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 4;
+  display: none;
+}
+
 #wrapper {
   display: inline-block;
   float: overflow;
@@ -213,7 +191,7 @@ section {
   height: 350px;
   margin: 10px;
   background-color: #ffffff;
-  box-shadow: 0px 0px 3px grey;
+  box-shadow: 0px 0px 3px #808080;
 }
 #products article img {
   width: 98%;
@@ -228,7 +206,7 @@ section {
   color: #038b47;
 }
 #products article:hover {
-  box-shadow: 0px 0px 20px grey;
+  box-shadow: 0px 0px 20px #808080;
 }
 
 aside #sub-menu {
@@ -238,10 +216,10 @@ aside #sub-menu {
   height: 500px;
   margin: 10px;
   background-color: #ffffff;
-  box-shadow: 0px 0px 3px grey;
+  box-shadow: 0px 0px 3px #808080;
 }
 aside #sub-menu #category h3 {
-  color: grey;
+  color: #808080;
 }
 aside #sub-menu #category ul {
   list-style: none;
@@ -250,29 +228,29 @@ aside #sub-menu #category li a {
   text-decoration: none;
 }
 aside #sub-menu #category li a button {
-  background-color: white;
+  background-color: #ffffff;
   border: none;
   color: #fff;
   padding: 20px;
   outline: none;
   text-align: left;
   width: 100%;
-  color: grey;
+  color: #808080;
 }
 aside #sub-menu #category li a button:hover {
-  background-color: #f2f2f2;
+  background-color: #efefef;
 }
 
 footer {
-  background-color: white;
-  box-shadow: 0px 0px 3px grey;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 3px #808080;
   display: inline-block;
   float: overflow;
   width: 98%;
   height: 250px;
   padding-left: 1%;
   padding-right: 1%;
-  color: grey;
+  color: #808080;
 }
 footer h3 {
   margin-bottom: 10px;
@@ -285,18 +263,18 @@ footer #copyright {
   width: 97%;
   height: 50px;
   float: left;
-  background-color: white;
+  background-color: #ffffff;
 }
 footer #hyper-logo {
   width: 97%;
   height: 200px;
-  background-color: white;
+  background-color: #ffffff;
   float: left;
 }
 footer #social-network {
   width: 97%;
   height: 200px;
-  background-color: white;
+  background-color: #ffffff;
   float: left;
 }
 footer #social-network li {
@@ -304,12 +282,12 @@ footer #social-network li {
 }
 footer #social-network li a {
   text-decoration: none;
-  color: grey;
+  color: #808080;
 }
 footer #contacts {
   width: 97%;
   height: 200px;
-  background-color: white;
+  background-color: #ffffff;
   float: left;
 }
 footer #contacts li {
@@ -317,7 +295,7 @@ footer #contacts li {
 }
 footer #contacts li a {
   text-decoration: none;
-  color: grey;
+  color: #808080;
 }
 
 @media screen and (min-width: 481px) {
@@ -366,16 +344,12 @@ footer #contacts li a {
   }
 }
 @media screen and (min-width: 950px) {
-  #menu {
+  #menu-icon {
     display: none;
   }
 
   #logo {
     display: inline;
-  }
-
-  #nav-icon nav ul li {
-    display: none;
   }
 
   #nav nav ul li {
@@ -395,16 +369,12 @@ footer #contacts li a {
   }
 }
 @media screen and (min-width: 1024px) {
-  #menu {
+  #menu-icon {
     display: none;
   }
 
   #logo {
     display: inline;
-  }
-
-  #nav-icon nav ul li {
-    display: none;
   }
 
   #nav nav ul li {
@@ -423,16 +393,12 @@ footer #contacts li a {
   }
 }
 @media screen and (min-width: 1200px) {
-  #menu {
+  #menu-icon {
     display: none;
   }
 
   #logo {
     display: inline;
-  }
-
-  #nav-icon nav ul li {
-    display: none;
   }
 
   #nav nav ul li {

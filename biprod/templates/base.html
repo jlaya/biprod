@@ -4,13 +4,15 @@
 <head>
   <title>{% block title %}{% endblock %}</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href={% static "css/style.css" %} rel="stylesheet">
   <link href={% static "css/normalize.css" %} rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+<!-- Todo el header es la barra de navegación -->
   <header>
+<!-- Elemento 1: menu de navegación para pantallas grandes -->
     <div id="nav">
       <nav>
         <ul>
@@ -19,6 +21,8 @@
         </ul>
       </nav>
     </div>
+<!-- Fin del elemento 1 -->
+<!-- Elemento 2: Formulario de busqueda -->
     <div id="form">
       <form>
         <button type="submit"><img src="{% static "img/icons/search1x.png" %}" ></button>
@@ -26,15 +30,21 @@
         <!-- <input type="submit" class="buscar" value="Buscar" /> -->
       </form>
     </div>
-    <div id="menu">
+<!-- Fin del elemento 2 -->
+<!-- Elemento 3: Boton para invocar menu lateral -->
+    <div id="menu-icon">
       <a href="javascript:showLightbox();"><img src="{% static "img/icons/menu.png" %}" ></a>
     </div>
+<!-- Fin del elemento 3 -->
+<!-- Elemento 4: Logo -->
     <div id="logo">
       <h2>HyperJumbo</h2>
     </div>
+<!-- Fin del elemento 4 -->
   </header>
+<!-- Menu lateral -->
   <nav>
-      <ul id="menu-icon">
+      <ul id="menu-icon-clear">
         <a href="javascript:hideLightbox();"><img src="{% static "img/icons/clear_black1x.png" %}" ></a>
       </ul>
       <ul id="menu-side">
@@ -43,10 +53,13 @@
         <li><a href="#"><button class="ripple">Salir</button></a></li>
       </ul>
   </nav>
+<!-- Fin del menu lateral -->
+<!-- Contenedor del contenido principal -->
   <div id="wrapper">
     {% block content %}
     {% endblock %}
   </div>
+<!-- Fin del contenido -->
 <footer>
   <div id="contacts">
     <div id="box">
@@ -58,7 +71,6 @@
     </div>
   </div>
   </div>
-
   <div id="social-network">
     <div id="box">
       <h3>Redes Sociales</h3>
@@ -68,27 +80,16 @@
       </ul>
     </div>
   </div>
-
   <div id="hyper-logo">
-      <img src="{% static "img/logo.jpg" %}" width="200" height="200">
+    <img src="{% static "img/logo.jpg" %}" width="200" height="200">
   </div>
-
   <div id="copyright">
     <center><p>Copyright © 2016 Hyper Jumbo Mall</p></center>
   </div>
 </footer>
+<!-- Capa oscura que aparece cuando se hace click en el icono de menu -->
 <a href="javascript:hideLightbox();"><div id="fade" class="fadebox">&nbsp;</div></a>
-<script>
-function showLightbox() {
-    document.getElementById('menu-side').style.transform='translate(0%, 0)';
-    document.getElementById('fade').style.display='block';
-    document.getElementById('menu-icon').style.display='block';
-}
-function hideLightbox() {
-    document.getElementById('menu-side').style.transform='translate(-100%, 0)';
-    document.getElementById('fade').style.display='none';
-    document.getElementById('menu-icon').style.display='none';
-}
-</script>
+<!-- Fin de la capa -->
+<script type="text/javascript" src="{% static "js/script.js" %}"></script>
 </body>
 </html>
