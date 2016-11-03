@@ -1,26 +1,74 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+@import "colors";
+@import "class";
+* {padding: 0; margin: 0;}
 
 body {
-
+  background-color: $grey2;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
-  background: rgba(0,0,0,0.9);
+  background-color: $blue;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
+  box-shadow: 0px 0px 3px $grey;
 }
 
-#menu {
-  float: left;
-  margin: 10px;
+#nav {
+  float: right;
+  nav {
+    ul {
+      list-style: none;
+      overflow: hidden; /* Limpiamos errores de float */
+      li {
+        float: left;
+        font-size: 16px;
+        display: none;
+        a {
+          display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+          text-decoration: none;
+          button {
+            background-color: $blue;
+            border:none;
+            color: #fff;
+            padding: 20px;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+#form {
+  float: right;
+  margin-top: 10px;
+  width: 77%;
+  input {
+    float: right;
+    margin: 10px;
+    width: 59%;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 2px solid $white;
+    color: $white;
+  }
 
   button {
-    background-color: red;
+    width: 50px;
+    float: right;
+    margin: 10px;
+    background: $blue;
+    border: none;
+    outline: none;
   }
+}
+
+#menu-icon {
+  float: left;
+  margin: 10px;
 }
 
 #logo {
@@ -28,92 +76,62 @@ header {
   margin-left: 20px;
   margin-top: 10px;
   display: none;
+  color: $white;
 }
 
-#form {
-  background-color: blue;
-  float: right;
-  margin-top: 10px;
-  width: 85%;
-
-  input {
-    float: right;
-    margin: 10px;
-    width: 70%;
-  }
-
-  button {
-    width: 50px;
-    float: right;
-    margin: 10px;
-  }
+#menu-side {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: $white;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  z-index: 3;
 }
 
-#nav-icon {
-  float: right;
-
-  nav {
-     /* Desplazamos el nav hacia la izquierda */
-
-    ul {
-      list-style: none;
-      overflow: hidden; /* Limpiamos errores de float */
-
-      li {
-        float: left;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        display: none;
-
-        a {
-          display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-          padding: 20px;
-          color: #fff;
-          text-decoration: none;
-
+#menu-side {
+  ul {
+    list-style: none;
+  }
+    li {
+      margin-top: 15px;
+      a {
+        text-decoration: none;
+        color: $grey;
+        button {
+          background-color: $white;
+          border:none;
+          color: $grey;
+          outline: none;
+          width: 116%;
+          text-align: left;
+          padding: 15px;
+        }
+        button:hover {
+          background-color: $grey2;
         }
       }
     }
-
- }
-}
-
-
-#nav {
-  float: right;
-
-  nav {
-     /* Desplazamos el nav hacia la izquierda */
-
-    ul {
-      list-style: none;
-      overflow: hidden; /* Limpiamos errores de float */
-
-      li {
-        float: left;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        display: none;
-
-        a {
-          display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
-          padding: 20px;
-          color: #fff;
-          text-decoration: none;
-
-        }
-      }
+    li:hover {
+      background-color: $grey2;
     }
-  }
-
-  nav ul li:hover {
-    background: #3ead47;
-  }
 }
 
-
+#menu-icon-clear {
+  position: fixed;
+  top:10px;
+  left: 10px;
+  z-index: 4;
+  display: none;
+}
 
 #wrapper {
+  display: inline-block;
   float: overflow;
   width: 100%;
   height: auto;
@@ -121,176 +139,138 @@ header {
 }
 
 section {
-  background-color: #9999CC;
+  float: right;
   width: 100%;
-
 }
 
-article {
-  display: inline-block;
-  background-color: silver;
-  width: 250px;
-  height: 270px;
-  margin: 10px;
+#products {
+  width: 90%;
+  margin: 0 auto;
+  article {
+    display: inline-block;
+    width: 95%;
+    height: 350px;
+    margin: 10px;
+    background-color: $white;
+    box-shadow: 0px 0px 3px $grey;
+    img {
+      width: 98%;
+      height: 70%;
+    }
+    h4 {
+      margin: 10px;
+      color: gray;
+    }
+    h2 {
+      margin: 10px;
+      color: $green;
+    }
+  }
+
+  article:hover {
+    box-shadow: 0px 0px 20px $grey;
+  }
+}
+
+aside {
+    #sub-menu {
+      display: none;
+      float: left;
+      width:250px;
+      height: 500px;
+      margin:10px;
+      background-color: $white;
+      box-shadow: 0px 0px 3px $grey;
+      #category {
+        h3 {
+          color: $grey;
+        }
+        ul {
+          list-style: none;
+        }
+          li {
+            a {
+              text-decoration: none;
+              button {
+                background-color: $white;
+                border:none;
+                color: #fff;
+                padding: 20px;
+                outline: none;
+                text-align: left;
+                width: 100%;
+                color: $grey;
+              }
+              button:hover {
+                background-color: $grey2;
+              }
+            }
+          }
+      }
+    }
 }
 
 footer {
-  background-color: #CCFFFF;
-  width: 100%;
-  height: 150px;
+  background-color: $white;
+  box-shadow: 0px 0px 3px $grey;
+  display: inline-block;
+  float: overflow;
+  width: 98%;
+  height: 250px;
+  padding-left: 1%;
+  padding-right: 1%;
+  color: $grey;
+  h3 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  ul {
+    list-style: none;
+  }
+
+  #copyright {
+    width: 97%;
+    height: 50px;
+    float: left;
+    background-color: $white;
+  }
+
+  #hyper-logo {
+    width: 97%;
+    height: 200px;
+    background-color: $white;
+    float: left;
+    img {
+    }
+  }
+
+  #social-network {
+    width: 97%;
+    height: 200px;
+    background-color: $white;
+    float: left;
+    li {
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: $grey;
+      }
+    }
 }
 
-@media screen and (min-width: 481px) {
-
-  #form {
-      width: 85%;
-
-      input {
-        width: 70%;
+  #contacts {
+    width: 97%;
+    height: 200px;
+    background-color: $white;
+    float: left;
+    li {
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: $grey;
       }
+    }
   }
-
 }
 
-@media screen and (min-width: 767px) {
-  #menu {
-    display: none;
-  }
-  #logo {
-    display: inline;
-  }
-
-  #nav-icon {
-    nav {
-      ul {
-        li{
-          display: inline;
-        }
-      }
-    }
-
-  }
-  #form {
-      width: 61%;
-
-      input {
-        width: 78%;
-      }
- }
-}
-
-@media screen and (min-width: 950px) {
-  #menu {
-    display: none;
-  }
-
-  #logo {
-    display: inline;
-  }
-
-  #nav-icon {
-    nav {
-      ul {
-        li{
-          display: none;
-        }
-      }
-    }
-
-  }
-
-  #nav {
-    nav {
-      ul {
-        li{
-          display: inline;
-        }
-      }
-    }
-
-  }
-
-  #form {
-      width: 50%;
- }
-}
-
-@media screen and (min-width: 1024px) {
-  #menu {
-    display: none;
-  }
-
-  #logo {
-    display: inline;
-  }
-
-  #nav-icon {
-    nav {
-      ul {
-        li{
-          display: none;
-        }
-      }
-    }
-
-  }
-
-  #nav {
-    nav {
-      ul {
-        li{
-          display: inline;
-        }
-      }
-    }
-
-  }
-
-  #form {
-      width: 55%;
-
-      input {
-        width: 80%;
-      }
- }
-}
-
-@media screen and (min-width: 1200px) {
-  #menu {
-    display: none;
-  }
-
-  #logo {
-    display: inline;
-  }
-
-  #nav-icon {
-    nav {
-      ul {
-        li{
-          display: none;
-        }
-      }
-    }
-
-  }
-
-  #nav {
-    nav {
-      ul {
-        li{
-          display: inline;
-        }
-      }
-    }
-
-  }
-
-  #form {
-      width: 62%;
-
-      input {
-        width: 87%;
-      }
- }
-}
+@import "media";

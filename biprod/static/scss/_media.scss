@@ -1,0 +1,146 @@
+@media screen and (min-width: 481px) {
+
+  #form {
+      width: 89%;
+      input {
+        width: 74%;
+      }
+  }
+}
+
+
+@media screen and (min-width: 767px) {
+
+  aside {
+      #sub-menu {
+        display: inline;
+        width:250px;
+        background-color: #ffffff;
+        height: 500px;
+      }
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #form {
+      width: 71%;
+
+      input {
+        width: 78%;
+      }
+   }
+   section {
+     width: 64%;
+   }
+
+   #products {
+     article {
+       width: 44%;
+     }
+   }
+
+   footer {
+     #hyper-logo {
+       width: 32%;
+     }
+     #social-network {
+       width: 32%;
+     }
+     #contacts {
+       width: 32%;
+     }
+   }
+}
+
+@media screen and (min-width: 950px) {
+  #menu-icon {
+    display: none;
+  }
+
+  #logo {
+    display: inline;
+  }
+
+  #nav {
+    nav {
+      ul {
+        li{
+          display: inline;
+        }
+      }
+    }
+  }
+
+  #form {
+      width: 50%;
+  }
+  section {
+    width: 71%;
+  }
+  #products {
+    article {
+      width: 29%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #menu-icon {
+    display: none;
+  }
+  #logo {
+    display: inline;
+  }
+
+  #nav {
+    nav {
+      ul {
+        li{
+          display: inline;
+        }
+      }
+    }
+  }
+  #form {
+      width: 55%;
+
+      input {
+        width: 80%;
+      }
+   }
+   section {
+     width: 73%;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+  #menu-icon {
+    display: none;
+  }
+  #logo {
+    display: inline;
+  }
+
+  #nav {
+    nav {
+      ul {
+        li{
+          display: inline;
+        }
+      }
+    }
+  }
+
+  #form {
+      width: 60%;
+
+      input {
+        width: 85%;
+      }
+  }
+  section {
+    width: 77%;
+  }
+}
