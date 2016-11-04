@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Bienvenidos{% endblock %}
+{% block content %}
+
+
+<form method="post" class="form-inline" autocomplete='off' id='frmproducts' enctype='multipart/form-data'>
+    {% csrf_token %}
+    <br/><br/><br/>
+    <label for="nombre">Nombre</label>
+    <input id='nombre' name='nombre'/>
+    <label for="descripcion">Descripcion</label>
+    <input id='descripcion' name='descripcion'/>
+    <label for="stock">Stock</label>
+    <input id='stock' name='stock'/>
+    <label for="precio">Precio</label>
+    <input id='precio' name='precio'/>
+    <input type='file' id='foto' name='foto'/>
+    <button type="submit" class="add-products">Registrar</button>
+    <br/><br/><br/>
+</form>
+<script src={% static "js/jquery-1.10.2.js" %} ></script>
+<script>
+    $(document).ready(function() {
+        
+	
+	$('button.add-products').click(function(e){
+		e.preventDefault();
+		var formData = new FormData(document.getElementById("frmproducts"));
+		
+		if ($('#nombre').val().trim()== ""){   
+			alert("Ingrese el nombre")
+
+		}else if ($("#descripcion").val().trim() == "") {
+			alert("Ingrese la descripcion")
+
+		}else if ($("#stock").val().trim() == "") {
+			alert("Ingrese el stock")
+
+		}else if ($("#precio").val().trim() == "") {
+			alert("Ingrese el precio")
+
+		} else{
+
+			$.ajax({
+                url: "",
+                type: "post",
+                dataType: "html",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false
+            }).done(function (res) {
+
+            });
+            
+			/*$.post('',$('#frmproducts').serialize(),function(response){*/
+				/*if (response == 'existe') {
+					bootbox.alert("Disculpe, el rubro especificado ya existe...", function() {
+						$("#nom_s").focus();
+						location.reload();
+					});
+				}
+				else{                
+						//$("#form_add_sector").submit(); // Esto hace que el formulario se envíe dos veces,
+						// puesto que ya se está enviando serializado vía post de jquery.
+						url = '/rubros'
+						window.location = url
+				}*/
+				//location.reload();
+				
+			/*});*/
+			//$("#form_add_rubro").submit();
+		}
+	});
+});
+
+</script>
+
+
+{% endblock %}
